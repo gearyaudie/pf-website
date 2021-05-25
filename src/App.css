@@ -1,38 +1,273 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #1f1f1f;
+  color: #c5cbd4;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.text-secondary {
+  color: #717380;
+}
+
+/* Navbar */
+.navbar {
+  background: #1f1f1f;
+  color: #fff;
+  height: 70px;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  color: #fff;
+  font-size: 18px;
+  margin: 10px;
+}
+
+.navbar a:hover {
+  color: #8abefe;
+}
+
+.navbar .flex {
+  justify-content: space-between;
+}
+
+.navbar .nav-resume {
+  color: #63a9ff;
+}
+
+.navbar .nav-resume:hover {
+  color: #8abefe;
+}
+
+/* Home */
+.home-sec {
+  background: #1f1f1f;
+  margin-top: 180px;
+  margin-bottom: 400px;
+  padding: 0 100px;
+}
+
+.home-sec h1 {
+  font-size: 65px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+.home-sec .icons {
+  margin-left: 6px;
+  margin-right: 25px;
+  color: #63a9ff;
+}
+
+.home-sec .icons-container {
+  margin-top: 20px;
+}
+
+.home-sec .icons:hover {
+  color: #8abefe;
+}
+
+/* Projects */
+.projects-sec {
+  margin-top: 250px;
+  padding: 0 100px;
+}
+
+.projects-sec h1 {
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.projects-sec p {
+  color: #8abefe;
+}
+
+.projects-sec .proj-img {
+  width: 250px;
+  height: 155px;
+}
+
+.grid-container {
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+.grid-container .grid-3 {
+  padding: 15px 0px;
+}
+
+.proj-card {
+  position: relative;
+}
+
+.proj-over {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+}
+
+.proj-card:hover .proj-over {
+  border: 2px solid #8abefe;
+  height: 100%;
+}
+
+.proj-title {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: left;
+  margin: 20px;
+}
+
+.proj-desc {
+  color: #c5cbd4;
+  font-size: 10px;
+  font-weight: 300;
+  text-align: left;
+  margin: 20px;
+}
+
+/* About Me */
+.about-sec {
+  margin-top: 200px;
+  padding: 0 100px;
+  text-align: left;
+}
+
+.about-sec h1 {
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.about-sec .about-text {
+}
+
+.about-sec .skills-list::before {
+  content: "\2022";
+  color: #8abefe;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+}
+
+.about-special {
+  color: #8abefe;
+  margin-right: 0.4em;
+}
+
+/* Work */
+.work-sec {
+  margin-top: 175px;
+  padding: 0 100px;
+}
+
+.work-sec h1 {
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.work-sec .work-title {
+  margin: 20px 0px;
+}
+
+.work-sec .work-desc {
+  margin-bottom: 20px;
+  color: #595959;
+}
+
+/* Contact */
+
+.contact-sec {
+  margin: 175px auto;
+  /* padding: 0 100px; */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.contact-sec h1 {
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.contact-sec p {
+  margin-left: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.contact-sec .contact-details {
+  margin-top: 40px;
+}
+
+.inline {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  margin: 10px auto;
 }
 
-.App-link {
-  color: #61dafb;
+.contact-icon {
+  /* margin-bottom: 00px; */
+  margin: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Footer */
+.footer-sec {
+  margin-top: 400px;
 }
