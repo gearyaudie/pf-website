@@ -27,8 +27,6 @@ export const Projects = () => {
             src="https://via.placeholder.com/225x175"
             alt=""
           />
-        </div>
-        <div className="grid-3">
           <img
             className="proj-img"
             src="https://via.placeholder.com/225x175"

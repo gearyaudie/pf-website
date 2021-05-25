@@ -159,7 +159,7 @@ a {
   right: 0;
   background-color: rgba(0, 0, 0, 0.8);
   overflow: hidden;
-  width: 100%;
+  width: 250px;
   height: 0;
   transition: 0.5s ease;
 }
@@ -259,6 +259,9 @@ a {
 .inline {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   margin: 10px auto;
 }
 
@@ -270,4 +273,16 @@ a {
 /* Footer */
 .footer-sec {
   margin-top: 400px;
+}
+
+@media (max-width: 1000px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 725px) {
+  .grid-3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
