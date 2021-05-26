@@ -2,7 +2,7 @@ import React from "react";
 
 export const Work = () => {
   return (
-    <div className="work-sec container">
+    <div className="work-sec container" id="work">
       <h1>Work</h1>
       <p className="work-title">
         Front End Web Developer Intern -{" "}

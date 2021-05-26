@@ -94,14 +94,13 @@ a {
 .home-sec {
   background: #1f1f1f;
   margin-top: 180px;
-  margin-bottom: 400px;
+  margin-bottom: 300px;
   padding: 0 100px;
 }
 
 .home-sec h1 {
   font-size: 65px;
   font-weight: 500;
-  margin-bottom: 0px;
 }
 
 .home-sec .icons {
@@ -120,7 +119,7 @@ a {
 
 /* Projects */
 .projects-sec {
-  margin-top: 250px;
+  margin-top: 375px;
   padding: 0 100px;
 }
 
@@ -152,7 +151,8 @@ a {
   position: relative;
 }
 
-.proj-over {
+.proj-over,
+.proj-over-2 {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -186,7 +186,7 @@ a {
 
 /* About Me */
 .about-sec {
-  margin-top: 200px;
+  margin-top: 350px;
   padding: 0 100px;
   text-align: left;
 }
@@ -215,7 +215,7 @@ a {
 
 /* Work */
 .work-sec {
-  margin-top: 175px;
+  margin-top: 300px;
   padding: 0 100px;
 }
 
@@ -281,8 +281,95 @@ a {
   }
 }
 
-@media (max-width: 725px) {
+@media (max-width: 768px) {
+  .home-sec,
+  .projects-sec,
+  .about-sec,
+  .work-sec,
+  .contact-sec {
+    padding: 0 75px;
+  }
+
+  .home-sec h1 {
+    font-size: 55px;
+  }
+
+  .projects-sec h1,
+  .about-sec h1,
+  .work-sec h1,
+  .contact-sec h1 {
+    font-size: 28px;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects-sec .proj-img {
+    width: 300px;
+    height: 205px;
+  }
+  .proj-over {
+    width: 300px;
+  }
+}
+
+@media (max-width: 675px) {
+  .home-sec,
+  .projects-sec,
+  .about-sec,
+  .work-sec,
+  .contact-sec {
+    padding: 0 55px;
+  }
+
   .grid-3 {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .projects-sec .proj-img {
+    width: 525px;
+    height: 355px;
+  }
+  .proj-over {
+    width: 525px;
+  }
+}
+
+@media (max-width: 550px) {
+  .home-sec,
+  .projects-sec,
+  .about-sec,
+  .work-sec,
+  .contact-sec {
+    padding: 0 20px;
+  }
+
+  .projects-sec .proj-img {
+    width: 350px;
+    height: 225px;
+  }
+  .proj-over {
+    width: 350px;
+  }
+}
+
+@media (max-width: 425px) {
+  .home-sec h1 {
+    font-size: 32px;
+  }
+
+  .projects-sec h1,
+  .about-sec h1,
+  .work-sec h1,
+  .contact-sec h1 {
+    font-size: 25px;
+  }
+  .navbar a {
+    color: #fff;
+    font-size: 15px;
+    margin: 5px;
+  }
+  .navbar .flex {
+    justify-content: center;
   }
 }
