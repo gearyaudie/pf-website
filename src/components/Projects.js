@@ -22,7 +22,7 @@ export const Projects = () => {
             </div>
           </div>
           <div className="proj-container">
-            <a href="https://nameless-everglades-73539.herokuapp.com/">
+            <a href="https://weatherapp-geary.netlify.app/">
               <div className="proj-card">
                 <img
                   className="proj-img"
@@ -37,7 +37,7 @@ export const Projects = () => {
             </div>
           </div>
           <div className="proj-container">
-            <a href="https://weatherapp-geary.netlify.app/">
+            <a href="https://task-dash.herokuapp.com/">
               <div className="proj-card">
                 <img
                   className="proj-img"
