@@ -37,7 +37,7 @@ export const Projects = () => {
             </div>
           </div>
           <div className="proj-container">
-            <a href="https://task-dash.herokuapp.com/">
+            <a href="https://weatherapp-geary.netlify.app/">
               <div className="proj-card">
                 <img
                   className="proj-img"
