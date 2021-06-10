@@ -66,6 +66,21 @@ export const Projects = () => {
               <p>React JS, TMDB API</p>
             </div>
           </div>
+          <div className="proj-container">
+            <a href="https://diaryofacow.herokuapp.com">
+              <div className="proj-card">
+                <img
+                  className="proj-img"
+                  src="https://i.ibb.co/grWb32y/Screenshot-152.png"
+                  alt=""
+                />
+              </div>
+            </a>
+            <div className="proj-bg">
+              <h1>Node Blog (CRUD)</h1>
+              <p>Node JS, Express JS, MongoDB</p>
+            </div>
+          </div>
 
           {/* <img
             className="proj-img"

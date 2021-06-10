@@ -101,7 +101,7 @@ a {
 /* Home */
 .home-sec {
   background: var(--dark-gray);
-  margin-top: 180px;
+  margin-top: 250px;
   margin-bottom: 300px;
   padding: 0 100px;
 }
@@ -225,7 +225,7 @@ a {
 
 /* About Me */
 .about-sec {
-  margin-top: 350px;
+  margin-top: 400px;
   padding: 0 100px;
   text-align: left;
 }
