@@ -11,7 +11,7 @@ export const Home = () => {
     <>
       {/* <Navbar /> */}
       <div className="home-sec container">
-        <h1>Geary Audie</h1>
+        <h1>Geary Audie S</h1>
         <h1 className="text-secondary">Front End Web</h1>
         <h1 className="text-secondary">Developer</h1>
         <div className="icons-container">
