@@ -33,7 +33,7 @@ export const Projects = () => {
             </a>
             <div className="proj-bg">
               <h1>Weather App</h1>
-              <p>React JS, OpenWeatherMap API</p>
+              <p>React JS, Redux, OpenWeatherMap API</p>
             </div>
           </div>
           <div className="proj-container">

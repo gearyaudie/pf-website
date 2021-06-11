@@ -1,0 +1,1 @@
+export const TOGGLE_THEME_COLOR = "TOGGLE_THEME_COLOR";
