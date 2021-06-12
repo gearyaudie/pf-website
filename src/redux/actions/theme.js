@@ -1,8 +1,8 @@
-import TOGGLE_THEME_COLOR from "../types/theme";
+import { TOGGLE_THEME_COLOR } from "../types/theme";
 
-export const toggleThemeColor = (action) => {
+export const toggleThemeColor = (state) => {
   return {
     type: TOGGLE_THEME_COLOR,
-    payload: action,
+    payload: state,
   };
 };

@@ -21,6 +21,11 @@ body {
   font-weight: 400;
 }
 
+.theme {
+  background-color: #b8b8b8;
+  color: #333;
+}
+
 .flex {
   display: flex;
   justify-content: center;
@@ -100,10 +105,36 @@ a {
 
 /* Home */
 .home-sec {
-  background: var(--dark-gray);
-  margin-top: 250px;
-  margin-bottom: 300px;
+  /* background: var(--dark-gray); */
+  /* margin-top: 250px;
+  margin-bottom: 300px; */
+  height: 600px;
+  /* margin-top: 200px; */
   padding: 0 100px;
+}
+
+.home-sec .toggle-btn {
+  padding: 10px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  background-color: #b8b8b8;
+  color: #333;
+  border: 0px solid;
+}
+
+.home-sec .toggle-btn-lightmode {
+  padding: 10px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  background-color: #333;
+  color: #b8b8b8;
+  border: 0px solid;
+}
+
+.home-sec-pad {
+  padding-top: 250px;
 }
 
 .home-sec h1 {
@@ -115,6 +146,12 @@ a {
   margin-left: 6px;
   margin-right: 25px;
   color: var(--primary);
+}
+
+.icons-lightmode {
+  margin-left: 6px;
+  margin-right: 25px;
+  color: var(--dark-gray);
 }
 
 .home-sec .icons-container {
@@ -241,7 +278,7 @@ a {
 
 .about-sec .skills-list::before {
   content: "\2022";
-  color: var(--primary-light);
+  color: var(--gray);
   font-weight: bold;
   display: inline-block;
   width: 1em;
@@ -249,6 +286,11 @@ a {
 
 .about-special {
   color: var(--primary-light);
+  margin-right: 0.4em;
+}
+
+.about-special-lightmode {
+  color: #000000;
   margin-right: 0.4em;
 }
 
@@ -310,13 +352,22 @@ a {
   color: var(--primary);
 }
 
+.contact-icon-lightmode {
+  margin: 5px;
+  color: var(--dark-gray);
+}
+
 .contact-icon:hover {
   color: var(--primary-light);
 }
 
+.contact-sec .made-with {
+  padding-top: 100px;
+}
+
 /* Footer */
 .footer-sec {
-  margin-top: 400px;
+  height: 75px;
 }
 
 @media (max-width: 1000px) {
@@ -408,14 +459,18 @@ a {
 
 @media (max-width: 425px) {
   .home-sec {
-    margin-top: 150px;
-    margin-bottom: 0px;
+    height: 400px;
+    /* margin-top: 200px; */
+    padding: 0 30px;
+  }
+  .home-sec-pad {
+    padding-top: 150px;
   }
   .about-sec {
-    margin-top: 355px;
+    margin-top: 350px;
   }
   .home-sec h1 {
-    font-size: 38px;
+    font-size: 40px;
   }
 
   .projects-sec h1,

@@ -4,9 +4,9 @@ import { Link } from "react-scroll";
 export const Navbar = () => {
   return (
     <>
-      <div class="navbar">
-        <div class="container flex">
-          <h1 class="logo"></h1>
+      <div className="navbar">
+        <div className="container flex">
+          <h1> </h1>
           <nav>
             <ul>
               <li>
