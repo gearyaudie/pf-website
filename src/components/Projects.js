@@ -52,7 +52,7 @@ export const Projects = () => {
             </div>
           </div>
           <div className="proj-container">
-            <a href="https://task-dash.herokuapp.com/">
+            <a href="https://moviedb-geary.netlify.app/">
               <div className="proj-card">
                 <img
                   className="proj-img"
@@ -63,7 +63,7 @@ export const Projects = () => {
             </a>
             <div className="proj-bg">
               <h1>Movies Database App</h1>
-              <p>React JS, TMDB API</p>
+              <p>React JS, Redux, TMDB API</p>
             </div>
           </div>
           <div className="proj-container">
