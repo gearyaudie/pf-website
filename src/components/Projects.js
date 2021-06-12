@@ -19,7 +19,7 @@ export const Projects = () => {
             </a>
             <div className="proj-bg">
               <h1>Contact Tracing App</h1>
-              <p>React JS, Firebase</p>
+              <p>React JS, Redux, Firebase</p>
             </div>
           </div>
           <div className="proj-container">
