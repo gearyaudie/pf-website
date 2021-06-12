@@ -407,8 +407,15 @@ a {
 }
 
 @media (max-width: 425px) {
+  .home-sec {
+    margin-top: 150px;
+    margin-bottom: 0px;
+  }
+  .about-sec {
+    margin-top: 355px;
+  }
   .home-sec h1 {
-    font-size: 32px;
+    font-size: 38px;
   }
 
   .projects-sec h1,
