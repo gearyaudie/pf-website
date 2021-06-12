@@ -4,6 +4,7 @@ export const Projects = () => {
   return (
     <div className="projects-sec container" id="projects">
       <h1>Projects</h1>
+      <p>All projects repository are available for view on GitHub</p>
       <div className="grid-container">
         <div className="grid-3">
           <div className="proj-container">
