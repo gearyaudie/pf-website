@@ -8,7 +8,7 @@ export const Projects = () => {
       <div className="grid-container">
         <div className="grid-3">
           <div className="proj-container">
-            <a href="https://stark-ocean-04445.herokuapp.com/">
+            <a href="https://contact-tracing.netlify.app/">
               <div className="proj-card">
                 <img
                   className="proj-img"
