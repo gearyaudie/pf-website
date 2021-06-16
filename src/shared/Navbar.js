@@ -1,19 +1,47 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-scroll";
+import { toggleThemeColor } from "../redux/actions/theme";
 
 export const Navbar = () => {
+  const themeData = useSelector((state) => state.theme.themeChange);
+  const dispatch = useDispatch();
+
   return (
     <>
-      <div className="navbar">
+      <nav
+        className="navbar"
+        style={themeData === false ? { backgroundColor: "#000000" } : {}}
+      >
         <div className="container flex">
           <h1> </h1>
           <nav>
             <ul>
+              <li className="toggle-li">
+                <input
+                  type="checkbox"
+                  className="checkbox"
+                  id="chk"
+                  onChange={() => {
+                    dispatch(toggleThemeColor(!themeData));
+                  }}
+                />
+                <label
+                  className={themeData === false ? "label" : "label-light"}
+                  for="chk"
+                >
+                  <i class="fas fa-sun fa-xs"></i>
+                  <i class="fas fa-moon fa-xs"></i>
+                  <div
+                    class={themeData === false ? "ball" : "ball-light"}
+                  ></div>
+                </label>
+              </li>
               <li>
                 {/* <a href="/">Home</a> */}
                 <Link
                   activateClass="active"
-                  to="section1"
+                  to="home"
                   spy={true}
                   smooth={true}
                   offset={-70}
@@ -73,7 +101,7 @@ export const Navbar = () => {
             </ul>
           </nav>
         </div>
-      </div>
+      </nav>
     </>
   );
 };

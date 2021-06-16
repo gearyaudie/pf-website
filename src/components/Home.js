@@ -13,27 +13,13 @@ export const Home = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className={themeData === true ? "theme" : ""}>
+    <div className={themeData === true ? "theme" : ""} id="home">
       {/* <div className="theme"> */}
       {/* <Navbar /> */}
       <div className="home-sec container">
         <div className="home-sec-pad">
-          <button
-            onClick={() => {
-              console.log(themeData);
-              dispatch(toggleThemeColor(!themeData));
-              console.log(themeData);
-            }}
-            className={
-              themeData === false ? "toggle-btn" : "toggle-btn-lightmode"
-            }
-          >
-            {themeData === false ? "Light" : "Dark"}
-          </button>
           <h1>Geary Audie</h1>
-          {/* {console.log("123")} */}
-          <h1 className="text-secondary">Front End Web</h1>
-          <h1 className="text-secondary">Developer</h1>
+          <h1 className="text-secondary">Front End Developer</h1>
           <div className="icons-container">
             <a
               className={themeData === true ? "icons-lightmode" : "icons"}
