@@ -1,8 +1,9 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { RootState } from "../redux/reducers";
 
-export const Work = () => {
-  const themeData = useSelector((state) => state.theme.themeChange);
+export const Work: React.FC = () => {
+  const themeData = useSelector((state: RootState) => state.theme.themeChange);
 
   return (
     <div className="work-sec container" id="work">

@@ -1,8 +1,9 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { RootState } from "../redux/reducers";
 
-export const Contact = () => {
-  const themeData = useSelector((state) => state.theme.themeChange);
+export const Contact: React.FC = () => {
+  const themeData = useSelector((state: RootState) => state.theme.themeChange);
   return (
     <div className="contact-sec container">
       <h1>Contact Details</h1>
@@ -30,7 +31,7 @@ export const Contact = () => {
           <p>+60 14 313 3567</p>
         </div>
       </div>
-      <p className="made-with">Made with React JS, Redux</p>
+      <p className="made-with">Made with React JS, Redux, and TypeScript</p>
     </div>
   );
 };

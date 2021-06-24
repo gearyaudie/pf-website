@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Projects = () => {
+export const Projects: React.FC = () => {
   return (
     <div className="projects-sec container">
       <div className="projects-pad" id="projects">
@@ -13,7 +13,7 @@ export const Projects = () => {
                 <div className="proj-card">
                   <img
                     className="proj-img"
-                    src="https://i.ibb.co/cTzbm6L/contact-tracing.png"
+                    src="https://i.ibb.co/KXm6pXt/Contact-Tracing-Thumbnail.webp"
                     alt=""
                   />
                 </div>
@@ -28,7 +28,7 @@ export const Projects = () => {
                 <div className="proj-card">
                   <img
                     className="proj-img"
-                    src="https://i.ibb.co/yYmpmB4/Screenshot-146.png"
+                    src="https://i.ibb.co/P6DWSH3/Weather-App-Thumbnail.webp"
                     alt=""
                   />
                 </div>
@@ -43,7 +43,7 @@ export const Projects = () => {
                 <div className="proj-card">
                   <img
                     className="proj-img"
-                    src="https://i.ibb.co/5v22VNC/Screenshot-148.png"
+                    src="https://i.ibb.co/jkP4SD3/Task-Dashboard-Thumbnail.webp"
                     alt=""
                   />
                 </div>
@@ -58,14 +58,14 @@ export const Projects = () => {
                 <div className="proj-card">
                   <img
                     className="proj-img"
-                    src="https://i.ibb.co/yBBtJPL/Screenshot-158.png"
+                    src="https://i.ibb.co/0G3fhTP/Movies-DB-Thumbnail.webp"
                     alt=""
                   />
                 </div>
               </a>
               <div className="proj-bg">
                 <h1>Movies Database App</h1>
-                <p>React JS, Redux, TMDB API</p>
+                <p>React JS, Redux, TypeScript, TMDB API</p>
               </div>
             </div>
             <div className="proj-container">
@@ -73,7 +73,7 @@ export const Projects = () => {
                 <div className="proj-card">
                   <img
                     className="proj-img"
-                    src="https://i.ibb.co/grWb32y/Screenshot-152.png"
+                    src=" https://i.ibb.co/K0wKB6S/Node-Blog-Thumbnail.webp"
                     alt=""
                   />
                 </div>

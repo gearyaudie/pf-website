@@ -2,16 +2,17 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-scroll";
 import { toggleThemeColor } from "../redux/actions/theme";
+import { RootState } from "../redux/reducers";
 
 export const Navbar = () => {
-  const themeData = useSelector((state) => state.theme.themeChange);
+  const themeData = useSelector((state: RootState) => state.theme.themeChange);
   const dispatch = useDispatch();
 
   return (
     <>
       <nav
         className="navbar"
-        style={themeData === false ? { backgroundColor: "#000000" } : {}}
+        style={themeData === false ? { backgroundColor: "#1c1c1c" } : {}}
       >
         <div className="container flex">
           <h1> </h1>
@@ -28,19 +29,19 @@ export const Navbar = () => {
                 />
                 <label
                   className={themeData === false ? "label" : "label-light"}
-                  for="chk"
+                  htmlFor="chk"
                 >
-                  <i class="fas fa-sun fa-xs"></i>
-                  <i class="fas fa-moon fa-xs"></i>
+                  <i className="fas fa-sun fa-xs"></i>
+                  <i className="fas fa-moon fa-xs"></i>
                   <div
-                    class={themeData === false ? "ball" : "ball-light"}
+                    className={themeData === false ? "ball" : "ball-light"}
                   ></div>
                 </label>
               </li>
               <li>
                 {/* <a href="/">Home</a> */}
                 <Link
-                  activateClass="active"
+                  activeClass="active"
                   to="home"
                   spy={true}
                   smooth={true}
@@ -53,7 +54,7 @@ export const Navbar = () => {
               <li>
                 {/* <a href="/projects">About</a> */}
                 <Link
-                  activateClass="active"
+                  activeClass="active"
                   to="about"
                   spy={true}
                   smooth={true}
@@ -66,7 +67,7 @@ export const Navbar = () => {
               <li>
                 {/* <a href="/projects">Projects</a> */}
                 <Link
-                  activateClass="active"
+                  activeClass="active"
                   to="projects"
                   spy={true}
                   smooth={true}
@@ -80,7 +81,7 @@ export const Navbar = () => {
                 {/* <a href="/">Work</a>
                  */}
                 <Link
-                  activateClass="active"
+                  activeClass="active"
                   to="work"
                   spy={true}
                   smooth={true}
