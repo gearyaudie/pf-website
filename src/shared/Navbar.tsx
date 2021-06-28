@@ -12,7 +12,7 @@ export const Navbar = () => {
     <>
       <nav
         className="navbar"
-        style={themeData === false ? { backgroundColor: "#1c1c1c" } : {}}
+        style={themeData === true ? { backgroundColor: "#333" } : {}}
       >
         <div className="container flex">
           <h1> </h1>

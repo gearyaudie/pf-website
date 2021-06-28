@@ -15,8 +15,8 @@ export const Home: React.FC = () => {
     <>
       <div className={themeIsLight ? "theme" : ""} id="home">
         <HomeContent />
-        <AboutMe />
         <Projects />
+        <AboutMe />
         <Work />
         <Contact />
         <Footer />
