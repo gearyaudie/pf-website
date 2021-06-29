@@ -1,8 +1,8 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-scroll";
-import { toggleThemeColor } from "../redux/actions/theme";
-import { RootState } from "../redux/reducers";
+import { toggleThemeColor } from "../../redux/actions/theme";
+import { RootState } from "../../redux/reducers";
 
 export const Navbar = () => {
   const themeData = useSelector((state: RootState) => state.theme.themeChange);

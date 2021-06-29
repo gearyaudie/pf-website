@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/reducers";
 
-export const HomeContent = () => {
+export const HomeContent: React.FC = () => {
   const themeData = useSelector((state: RootState) => state.theme.themeChange);
 
   const themeIsLight = themeData === true;

@@ -1,4 +1,12 @@
-export const projectsList = [
+type Projects = {
+  id: number;
+  title: string;
+  desc: string;
+  img: string;
+  website: string;
+}[];
+
+export const projectsList: Projects = [
   {
     id: 1,
     title: "Contact Tracing App",
