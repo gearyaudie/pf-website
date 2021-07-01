@@ -21,6 +21,7 @@ export const HomeContent: React.FC = () => {
             >
               <i className="fa fa-linkedin fa-2x  "></i>
             </a>
+            <span className="icons-line"></span>
             <a
               className={themeIsLight ? "icons-lightmode" : "icons"}
               href="https://github.com/gearyaudie"

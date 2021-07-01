@@ -17,9 +17,9 @@ export const projectsList: Projects = [
   {
     id: 2,
     title: "Weather App",
-    desc: "React JS, Redux, TypeScript, OpenWeatherMap API",
+    desc: "Next JS, React JS, Redux, TypeScript, OpenWeatherMap API",
     img: "https://i.ibb.co/9sXf5B0/weather-app-formatted.webp",
-    website: "https://weatherapp-geary.netlify.app/",
+    website: "https://weather-app-next-seven.vercel.app/",
   },
   {
     id: 3,

@@ -93,11 +93,12 @@ a {
 }
 
 .navbar a:hover {
-  color: var(--primary-light);
+  color: var(--secondary);
 }
 
 .navbar .flex {
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: center;
 }
 
 .navbar .nav-resume {
@@ -163,8 +164,15 @@ a {
   margin-top: 12px;
 }
 
+.home-sec .icons-line {
+  border-right: 2px solid gray;
+  height: 35px;
+  position: absolute;
+  /* left: 50%; */
+}
+
 .home-sec .icons:hover {
-  color: var(--primary-light);
+  color: var(--primary);
 }
 
 /* Projects */
@@ -177,7 +185,8 @@ a {
 .proj-line {
   width: 15%;
   height: 5px;
-  background: var(--gray);
+  background: var(--primary);
+  border: none;
   margin: 0 auto;
 }
 
@@ -399,7 +408,7 @@ a {
   .about-sec h1,
   .work-sec h1,
   .contact-sec h1 {
-    font-size: 28px;
+    font-size: 20px;
   }
 
   .grid-3 {
@@ -414,6 +423,13 @@ a {
   .work-sec,
   .contact-sec {
     padding: 0 55px;
+  }
+
+  .projects-sec h1,
+  .about-sec h1,
+  .work-sec h1,
+  .contact-sec h1 {
+    font-size: 18px;
   }
 
   .grid-3 {
@@ -434,6 +450,13 @@ a {
     margin: 0 auto;
     padding: 0 10;
     max-width: 300px;
+  }
+
+  .projects-sec h1,
+  .about-sec h1,
+  .work-sec h1,
+  .contact-sec h1 {
+    font-size: 15px;
   }
 
   .grid-3 {
@@ -463,7 +486,7 @@ a {
   .about-sec h1,
   .work-sec h1,
   .contact-sec h1 {
-    font-size: 25px;
+    font-size: 12px;
   }
   .navbar a {
     color: #fff;

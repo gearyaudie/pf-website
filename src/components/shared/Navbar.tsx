@@ -18,7 +18,7 @@ export const Navbar = () => {
           <h1> </h1>
           <nav>
             <ul>
-              <li className="toggle-li">
+              {/* <li className="toggle-li">
                 <input
                   type="checkbox"
                   className="checkbox"
@@ -37,7 +37,7 @@ export const Navbar = () => {
                     className={themeData === false ? "ball" : "ball-light"}
                   ></div>
                 </label>
-              </li>
+              </li> */}
               <li>
                 {/* <a href="/">Home</a> */}
                 <Link
