@@ -41,7 +41,7 @@ export const AboutMe: React.FC = () => {
           <p className="skills-list">Vue JS</p>
         </div>
         <div className="grid">
-          <p className="skills-list">Laravel</p>
+          <p className="skills-list">Next JS</p>
           <p className="skills-list">Node JS</p>
         </div>
       </div>
