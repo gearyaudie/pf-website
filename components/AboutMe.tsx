@@ -29,7 +29,7 @@ export const AboutMe: React.FC = () => {
             UI/UX design, website development, coding with front end and back
             end tools.
           </span>
-          Some of the tools I've worked with,
+          Some of the tools I have worked with,
         </p>
         <br />
         <div className="grid">
