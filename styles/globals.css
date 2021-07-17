@@ -185,17 +185,17 @@ a {
   margin: 0 auto;
 }
 
-.proj-line {
+.projects-pad {
+  margin-top: 145px;
+  padding-top: 50px;
+}
+
+.line {
   width: 15%;
   height: 5px;
   background: var(--primary);
   border: none;
   margin: 0 auto;
-}
-
-.projects-pad {
-  margin-top: 145px;
-  padding-top: 50px;
 }
 
 .projects-sec h1 {
