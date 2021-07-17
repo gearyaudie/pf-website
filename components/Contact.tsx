@@ -33,7 +33,9 @@ export const Contact: React.FC = () => {
           <p>+60 14 313 3567</p>
         </div>
       </div>
-      <p className="made-with">Made with React JS, Redux, and TypeScript</p>
+      <p className="made-with">
+        Made with Next JS, React JS, Redux, and TypeScript
+      </p>
     </div>
   );
 };
