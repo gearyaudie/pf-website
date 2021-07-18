@@ -44,6 +44,10 @@ export const AboutMe: React.FC = () => {
           <p className="skills-list">Next JS</p>
           <p className="skills-list">Node JS</p>
         </div>
+        <div className="grid">
+          <p className="skills-list">TypeScript</p>
+          <p className="skills-list">Material UI</p>
+        </div>
       </div>
     </div>
   );

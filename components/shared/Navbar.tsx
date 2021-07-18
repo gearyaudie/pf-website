@@ -3,10 +3,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-scroll";
 import { toggleThemeColor } from "../../redux/actions/theme";
 import { RootState } from "../../redux/reducers";
+import { useRouter } from "next/router";
 
 export const Navbar = () => {
   const themeData = useSelector((state: RootState) => state.theme.themeChange);
   const dispatch = useDispatch();
+  const router = useRouter();
 
   return (
     <>
@@ -39,7 +41,6 @@ export const Navbar = () => {
                 </label>
               </li> */}
               <li>
-                {/* <a href="/">Home</a> */}
                 <Link
                   activeClass="active"
                   to="home"
@@ -52,20 +53,6 @@ export const Navbar = () => {
                 </Link>
               </li>
               <li>
-                {/* <a href="/projects">About</a> */}
-                <Link
-                  activeClass="active"
-                  to="about"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                {/* <a href="/projects">Projects</a> */}
                 <Link
                   activeClass="active"
                   to="projects"
@@ -78,8 +65,18 @@ export const Navbar = () => {
                 </Link>
               </li>
               <li>
-                {/* <a href="/">Work</a>
-                 */}
+                <Link
+                  activeClass="active"
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  About
+                </Link>
+              </li>
+              <li>
                 <Link
                   activeClass="active"
                   to="work"

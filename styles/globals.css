@@ -8,7 +8,8 @@
   --navbar-background: black;
   --navbar-color: #c5cbd4;
   --dark-gray: #1f1f1f;
-  --gray: #c5cbd4;
+  --gray: #808080;
+  --light-gray: #d3d3d3;
   --muted: #595959;
   --white: #fff;
 }
@@ -109,6 +110,10 @@ a {
 
 .navbar .nav-resume:hover {
   color: var(--primary-light);
+}
+
+.active {
+  color: var(--secondary);
 }
 
 /* Home */
@@ -293,6 +298,7 @@ a {
 }
 
 .about-sec .about-text {
+  color: #808080;
 }
 
 .about-sec .skills-list::before {
@@ -336,7 +342,7 @@ a {
 
 .work-sec .work-desc {
   margin-bottom: 20px;
-  color: var(--muted);
+  color: var(--gray);
 }
 
 /* Contact */
@@ -355,6 +361,7 @@ a {
 
 .contact-sec p {
   margin-left: 15px;
+  color: var(--gray);
 }
 
 .contact-sec .contact-details {
@@ -417,7 +424,7 @@ a {
   .about-sec h1,
   .work-sec h1,
   .contact-sec h1 {
-    font-size: 20px;
+    font-size: 30px;
   }
 
   .grid-3 {
@@ -438,7 +445,14 @@ a {
   .about-sec h1,
   .work-sec h1,
   .contact-sec h1 {
-    font-size: 18px;
+    font-size: 28px;
+  }
+
+  .home-sec .text-main {
+    font-size: 55px;
+  }
+  .home-sec .text-main-light {
+    font-size: 55px;
   }
 
   .grid-3 {
@@ -465,7 +479,7 @@ a {
   .about-sec h1,
   .work-sec h1,
   .contact-sec h1 {
-    font-size: 15px;
+    font-size: 26px;
   }
 
   .grid-3 {
@@ -481,10 +495,10 @@ a {
     margin-top: 150px;
   }
   .home-sec .text-main {
-    font-size: 50px;
+    font-size: 40px;
   }
   .home-sec .text-main-light {
-    font-size: 50px;
+    font-size: 40px;
   }
 
   .home-sec .text-secondary {
@@ -495,7 +509,7 @@ a {
   .about-sec h1,
   .work-sec h1,
   .contact-sec h1 {
-    font-size: 12px;
+    font-size: 25px;
   }
   .navbar a {
     color: #fff;
