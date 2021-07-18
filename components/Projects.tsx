@@ -22,10 +22,12 @@ export const Projects: React.FC = () => {
           <div className={classes.projectsGrid}>
             {/* Loop through the projects list */}
             {sliceProjects.map((project) => (
-              <ProjectCard project={project} />
+              <ProjectCard project={project} key={project.id} />
             ))}
             {expand &&
-              moreProjects.map((project) => <ProjectCard project={project} />)}
+              moreProjects.map((project) => (
+                <ProjectCard project={project} key={project.id} />
+              ))}
           </div>
           <button className={classes.btn} onClick={() => setExpand(!expand)}>
             {expand ? "View Less" : "View More"}
