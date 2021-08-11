@@ -4,28 +4,40 @@ import { RootState } from "../redux/reducers";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
+import classes from "../styles/Home.module.css";
+
 export const HomeContent: React.FC = () => {
   const themeData = useSelector((state: RootState) => state.theme.themeChange);
 
   const themeIsLight = themeData === true;
   return (
     <div>
-      <div className="home-sec container">
-        <div className="home-sec-pad">
-          <h1 className={themeIsLight ? "text-main-light" : "text-main"}>
+      <div className={`${classes.home_sec} ${classes.container}`}>
+        <div className={classes.home_sec_pad}>
+          <h1
+            className={
+              themeIsLight
+                ? `${classes.text_main_light}`
+                : `${classes.text_main}`
+            }
+          >
             Geary Audie
           </h1>
-          <p className="text-secondary">Front End Developer</p>
-          <div className="icons-container">
+          <p className={classes.text_secondary}>Front End Developer</p>
+          <div className={classes.icons_container}>
             <a
-              className={themeIsLight ? "icons-lightmode" : "icons"}
+              className={
+                themeIsLight ? `${classes.icons_lightmode}` : `${classes.icons}`
+              }
               href="https://www.linkedin.com/in/geary-audie-308734142/"
             >
               <AiFillGithub size={32} />
             </a>
-            <span className="icons-line"></span>
+            <span className={classes.icons_line}></span>
             <a
-              className={themeIsLight ? "icons-lightmode" : "icons"}
+              className={
+                themeIsLight ? `${classes.icons_lightmode}` : `${classes.icons}`
+              }
               href="https://github.com/gearyaudie"
             >
               <FaLinkedinIn size={32} />

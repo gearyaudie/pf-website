@@ -4,18 +4,36 @@ import { Link } from "react-scroll";
 import { toggleThemeColor } from "../../redux/actions/theme";
 import { RootState } from "../../redux/reducers";
 import { useRouter } from "next/router";
+import classes from "../../styles/Navbar.module.css";
 
 export const Navbar = () => {
   const themeData = useSelector((state: RootState) => state.theme.themeChange);
   const dispatch = useDispatch();
   const router = useRouter();
 
+  const [showNav, setShowNav] = React.useState<any>(true);
+  const [scrollPos, setScrollPos] = React.useState<any>(0);
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
+
+  const handleScroll = () => {
+    console.log(document.body.getBoundingClientRect());
+    setScrollPos(document.body.getBoundingClientRect().top);
+    setShowNav(document.body.getBoundingClientRect().top > scrollPos);
+  };
+
   return (
-    <>
-      <nav
-        className="navbar"
-        style={themeData === true ? { backgroundColor: "#333" } : {}}
-      >
+    <div
+      className={`${classes.navbar} ${
+        showNav ? `${classes.active}` : `${classes.hidden}`
+      }`}
+    >
+      <nav style={themeData === true ? { backgroundColor: "#333" } : {}}>
         <div className="container flex">
           <h1> </h1>
           <nav>
@@ -42,9 +60,8 @@ export const Navbar = () => {
               </li> */}
               <li>
                 <Link
-                  activeClass="active"
+                  activeClass="activeNav"
                   to="home"
-                  spy={true}
                   smooth={true}
                   offset={-70}
                   duration={500}
@@ -54,9 +71,8 @@ export const Navbar = () => {
               </li>
               <li>
                 <Link
-                  activeClass="active"
+                  activeClass="activeNav"
                   to="projects"
-                  spy={true}
                   smooth={true}
                   offset={-70}
                   duration={500}
@@ -66,9 +82,8 @@ export const Navbar = () => {
               </li>
               <li>
                 <Link
-                  activeClass="active"
+                  activeClass="activeNav"
                   to="about"
-                  spy={true}
                   smooth={true}
                   offset={-70}
                   duration={500}
@@ -78,9 +93,8 @@ export const Navbar = () => {
               </li>
               <li>
                 <Link
-                  activeClass="active"
+                  activeClass="activeNav"
                   to="work"
-                  spy={true}
                   smooth={true}
                   offset={-70}
                   duration={500}
@@ -91,7 +105,7 @@ export const Navbar = () => {
               <li>
                 <a
                   href="https://drive.google.com/file/d/1Tvo-sUV5_o_bZ296Wy2zA8hnyrYJrF0p/view?usp=sharingf"
-                  className="nav-resume"
+                  className={classes.nav_resume}
                 >
                   Resume
                 </a>
@@ -100,6 +114,6 @@ export const Navbar = () => {
           </nav>
         </div>
       </nav>
-    </>
+    </div>
   );
 };

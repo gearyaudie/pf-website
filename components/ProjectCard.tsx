@@ -9,7 +9,7 @@ const ProjectCard = ({ project }: any) => {
         <img src={project.img} className={classes.img} alt="" />
         <div className={classes.imgOverlay}>
           <div className={classes.title}>{project.title}</div>
-          <div className={classes.desc}>{project.desc}</div>
+          <div className={classes.desc}>{project.desc.join(", ")}</div>
           <a
             className={classes.githubIcon}
             href={`https://github.com/gearyaudie/${project.git}`}
