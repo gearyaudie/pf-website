@@ -24,7 +24,11 @@ export const Navbar = () => {
   const handleScroll = () => {
     console.log(document.body.getBoundingClientRect());
     setScrollPos(document.body.getBoundingClientRect().top);
-    setShowNav(document.body.getBoundingClientRect().top > scrollPos);
+    if (document.body.getBoundingClientRect().y < -50) {
+      setShowNav(document.body.getBoundingClientRect().top > scrollPos);
+    } else {
+      setShowNav(true);
+    }
   };
 
   return (
