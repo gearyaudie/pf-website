@@ -1,17 +1,22 @@
 /* Home */
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
 .home_sec {
   height: 600px;
-  /* max-width: 800px; */
   padding: 0 100px;
 }
 
 .home_sec_pad {
   padding-top: 250px;
-  text-align: center;
+  text-align: left;
 }
 
 .home_sec .text_main {
-  font-size: 80px;
+  font-size: 75px;
   font-weight: 600;
   /* background-color: #8ee4af; */
   background-color: var(--primary);
@@ -29,19 +34,18 @@
 }
 
 .home_sec .text_secondary {
-  padding-top: 15px;
-  padding-bottom: 15px;
   padding-left: 10px;
-  font-size: 25px;
-  font-weight: 500;
-  text-align: center;
+  font-size: 50px;
+  font-weight: 600;
+  margin-top: -13px;
+  text-align: left;
   color: var(--text-color);
 }
 
 .home_sec .icons {
   margin-right: 20px;
-  margin-left: 15px;
-  color: var(--gray);
+  margin-left: 12px;
+  color: var(--text-color);
   transition: 0.2s ease-in-out;
 }
 
@@ -86,6 +90,10 @@
     font-size: 10px;
   }
 
+  .home_sec .text_secondary {
+    font-size: 40px;
+  }
+
   .projects_sec h1,
   .about_sec h1,
   .work_sec h1,
@@ -116,6 +124,10 @@
 
   .home_sec .text_main {
     font-size: 55px;
+  }
+
+  .home_sec .text_secondary {
+    font-size: 35px;
   }
   .home_sec .text_main_light {
     font-size: 55px;
@@ -168,6 +180,8 @@
   }
 
   .home_sec .text_secondary {
+    padding-top: 20px;
+    padding-bottom: 10px;
     font-size: 20px;
   }
 

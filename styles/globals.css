@@ -1,5 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
+.navSidebar {
+  /* background: #333; */
+  background-color: #fff;
+  width: 300px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  margin-top: 100px;
+  top: 0;
+  transition: 850ms;
+  z-index: 10000000;
+}
+
 :root {
   --primary: #c7493a;
   --secondary: #689775;
