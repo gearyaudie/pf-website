@@ -37,7 +37,7 @@ export const Navbar = () => {
   };
 
   const useClickOutside = (handler: any) => {
-    let domNode = React.useRef();
+    let domNode = React.useRef<any>();
     React.useEffect(() => {
       function handleClickOutside(event: any) {
         if (domNode.current && !domNode.current.contains(event.target)) {
