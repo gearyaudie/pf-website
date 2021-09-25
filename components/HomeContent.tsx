@@ -21,9 +21,12 @@ export const HomeContent: React.FC = () => {
                 : `${classes.text_main}`
             }
           >
-            Geary Audie
+            Hi, I'm Geary!
           </h1>
-          <p className={classes.text_secondary}>Front End Developer</p>
+          <p className={classes.text_secondary}>
+            A Front End Developer, working with current technologies to create
+            good looking websites
+          </p>
           <div className={classes.icons_container}>
             <a
               className={

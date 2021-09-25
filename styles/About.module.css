@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+  color: var(--text-color);
 }
 
 .about_sec {
@@ -32,7 +33,7 @@
 }
 
 .about_sec .about_text {
-  color: var(--gray-light);
+  color: var(--text-color);
 }
 
 .about_sec .skills_list::before {

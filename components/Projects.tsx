@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { projectsList } from "../constants/Projects";
-import classes from "../styles/Projects.module.css";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import ProjectCard from "./ProjectCard";
 import { AnyAction } from "redux";
+import Project from "./Project";
+import { Grid, Card, Typography, Button, makeStyles } from "@material-ui/core";
 
 export const Projects: React.FC = () => {
+  const classes = useStyles();
   const [expand, setExpand] = useState(false);
   const [value, setvalue] = useState("");
 
@@ -39,37 +41,84 @@ export const Projects: React.FC = () => {
   });
 
   return (
-    <div className="projects_sec container">
-      <div className="projects_pad" id="projects">
-        <hr className="line" />
-        <select onChange={handleChange} className={classes.selectBtn}>
-          <option value="">All</option>
-          <option value="React">React</option>
-          <option value="Next">Next</option>
-          <option value="Node">Node</option>
-        </select>
-        <div className="grid_container">
-          <div className={classes.projectsGrid}>
-            {/* Loop through the projects list */}
-            {filteredProjects.map((project) => (
-              <ProjectCard project={project} key={project.id} />
+    <Grid className={classes.root} id="projects">
+      {/* <hr className="line" /> */}
+      {/* <select onChange={handleChange}>
+        <option value="">All</option>
+        <option value="React">React</option>
+        <option value="Next">Next</option>
+        <option value="Node">Node</option>
+      </select> */}
+      <div>
+        <Grid
+          container
+          justifyContent="center"
+          alignItems="center"
+          className={classes.cardContainer}
+        >
+          {filteredProjects.map((project) => (
+            // <ProjectCard project={project} key={project.id} />
+            <Project project={project} key={project.id} />
+          ))}
+          {expand &&
+            filteredMoreProjects.map((project) => (
+              // <ProjectCard project={project} key={project.id} />
+              <Project project={project} key={project.id} />
             ))}
-            {expand &&
-              filteredMoreProjects.map((project) => (
-                <ProjectCard project={project} key={project.id} />
-              ))}
-          </div>
-          <button className={classes.btn} onClick={() => setExpand(!expand)}>
-            {expand ? "View Less" : "View More"}
-            {expand ? <IoIosArrowUp size={22} /> : <IoIosArrowDown size={22} />}
-          </button>
-          <p className="proj_desc">
-            All projects repository are available for view on GitHub
-          </p>
-        </div>
+        </Grid>
       </div>
-    </div>
+      <Grid className={classes.viewMoreBtnContainer}>
+        <Button
+          onClick={() => setExpand(!expand)}
+          className={classes.viewMoreBtn}
+          variant="outlined"
+        >
+          {/* {expand ? "View Less" : "View More"} */}
+          {expand ? <IoIosArrowUp size={50} /> : <IoIosArrowDown size={50} />}
+        </Button>
+      </Grid>
+      <p className="proj_desc">
+        All projects repository are available for view on GitHub
+      </p>
+    </Grid>
   );
 };
 
+const useStyles = makeStyles({
+  root: {
+    padding: "0 25px",
+  },
+  cardContainer: {
+    display: "grid",
+    // gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+    gridTemplateColumns: "repeat(4, 25%)",
+    justifyItems: "center",
+    gridGap: 10,
+    maxWidth: 850,
+    margin: "0 auto",
+    marginTop: 0,
+    "@media(max-width: 855px)": {
+      gridTemplateColumns: "repeat(2, 50%)",
+      maxWidth: 600,
+    },
+    "@media(max-width: 600px)": {
+      gridTemplateColumns: "repeat(2, 50%)",
+      maxWidth: 500,
+    },
+    "@media(max-width: 500px)": {
+      display: "flex",
+      flexDirection: "column",
+      maxWidth: 500,
+    },
+  },
+  viewMoreBtnContainer: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    paddingTop: 25,
+  },
+  viewMoreBtn: {
+    color: "#808080",
+  },
+});
 // Note: Img size should be 225 x 175px

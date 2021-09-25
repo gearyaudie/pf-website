@@ -1,41 +1,58 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/reducers";
-import { BiEnvelope } from "react-icons/bi";
-import { MdCall } from "react-icons/md";
+import {
+  Grid,
+  Card,
+  Typography,
+  Button,
+  makeStyles,
+  Link,
+} from "@material-ui/core";
 
 export const Contact: React.FC = () => {
   const themeData = useSelector((state: RootState) => state.theme.themeChange);
+  const classes = useStyles();
+
   return (
-    <div className="contact-sec container">
-      <h1>Contact Details</h1>
-      <div className="contact-details">
-        <div className="inline">
-          <a
-            href="mailto:gearyaudie.ga@gmail.com"
-            className={
-              themeData === true ? "contact-icon-lightmode" : "contact-icon"
-            }
-          >
-            <BiEnvelope size={18} />
-          </a>
-          <p>gearyaudie.ga@gmail.com</p>
-        </div>
-        <div className="inline">
-          <a
-            href="https://api.whatsapp.com/send?phone=60143133567&text=Hi%2C%20I%20am%20interested%20with%20your%20work!"
-            className={
-              themeData === true ? "contact-icon-lightmode" : "contact-icon"
-            }
-          >
-            <MdCall size={18} />
-          </a>
-          <p>+60 14 313 3567</p>
-        </div>
-      </div>
-      <p className="made-with">
-        Made with Next JS, React JS, Redux, and TypeScript
-      </p>
-    </div>
+    <Grid className={classes.root}>
+      <Grid className={classes.contactContainer}>
+        <Typography className={classes.contactTitle}>.get in touch</Typography>
+        <Link href="mailto:gearyaudie.ga@gmail.com">
+          <Button variant="outlined" className={classes.contactBtn}>
+            Click Me
+          </Button>
+        </Link>
+      </Grid>
+    </Grid>
   );
 };
+
+const useStyles = makeStyles({
+  root: {
+    marginTop: 175,
+    marginBottom: 75,
+    padding: "75px 0px",
+    color: "#808080",
+    background: "#fff",
+    width: "100%",
+  },
+  contactContainer: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  contactTitle: {
+    color: "#333",
+    fontWeight: 600,
+    fontSize: 45,
+  },
+  contactBtn: {
+    color: "#333",
+    marginTop: 35,
+    border: "2px solid #333",
+    textTransform: "none",
+    fontSize: 18,
+  },
+});

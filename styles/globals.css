@@ -20,11 +20,11 @@
   --background-color: black;
   --text-color: #c5cbd4;
   --navbar-background: black;
-  --navbar-color: #fff;
+  --navbar-color: #d3d3d3;
   --dark-gray: #1f1f1f;
   --gray: #808080;
   --light-gray: #d3d3d3;
-  --muted: #595959;
+  --muted: #999999;
   --white: #fff;
 }
 
@@ -34,6 +34,7 @@
   padding: 0;
 }
 
+html,
 body {
   background: var(--background-color);
   color: var(--text-color);
@@ -202,11 +203,12 @@ a {
 
 .work_sec .work_title {
   margin: 20px 0px;
+  color: var(--text-color);
 }
 
 .work_sec .work_desc {
   margin-bottom: 20px;
-  color: var(--gray-light);
+  color: var(--text-color);
 }
 
 /* Contact */

@@ -1,15 +1,46 @@
 import "../styles/globals.css";
-import type { AppProps } from "next/app";
 import { Provider } from "react-redux";
-import store from "../redux/store";
 import { Navbar } from "../components/shared/Navbar";
 
-function MyApp({ Component, pageProps }: AppProps) {
+import React from "react";
+import PropTypes from "prop-types";
+import { ThemeProvider } from "@material-ui/core/styles";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import theme from "../src/theme";
+import { MuiThemeProvider, createTheme } from "@material-ui/core/styles";
+import store from "../redux/store";
+
+import "../styles/globals.css";
+// import Layout from "../components/Layout";
+
+export default function MyApp(props: any) {
+  const { Component, pageProps } = props;
+
+  React.useEffect(() => {
+    // Remove the server-side injected CSS.
+    const jssStyles: any = document.querySelector("#jss-server-side");
+    if (jssStyles) {
+      jssStyles.parentElement.removeChild(jssStyles);
+    }
+  }, []);
+
   return (
-    <Provider store={store}>
-      <Navbar />
-      <Component {...pageProps} />
-    </Provider>
+    <React.Fragment>
+      <ThemeProvider theme={theme}>
+        {/* <Layout> */}
+        <Provider store={store}>
+          <CssBaseline />
+          <Navbar />
+          <Component {...pageProps} />
+        </Provider>
+        {/* </Layout> */}
+      </ThemeProvider>
+    </React.Fragment>
   );
 }
-export default MyApp;
+
+MyApp.propTypes = {
+  Component: PropTypes.elementType.isRequired,
+  pageProps: PropTypes.object.isRequired,
+};
+
