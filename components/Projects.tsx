@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { projectsList } from "../constants/Projects";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import ProjectCard from "./ProjectCard";
 import { AnyAction } from "redux";
 import Project from "./Project";
 import { Grid, Card, Typography, Button, makeStyles } from "@material-ui/core";
