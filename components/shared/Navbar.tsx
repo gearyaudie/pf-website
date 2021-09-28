@@ -6,7 +6,7 @@ import { RootState } from "../../redux/reducers";
 import { useRouter } from "next/router";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
-import classes from "../../styles/Navbar.module.css";
+import { Grid, Card, Typography, Button, makeStyles } from "@material-ui/core";
 
 export const Navbar = () => {
   const themeData = useSelector((state: RootState) => state.theme.themeChange);
@@ -19,6 +19,8 @@ export const Navbar = () => {
   const [sidebar, setSidebar] = React.useState<any>(false);
 
   const boxRef = React.useRef(null);
+
+  const classes = useStyles();
 
   React.useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -232,3 +234,111 @@ export const Navbar = () => {
     </>
   );
 };
+
+const useStyles = makeStyles({
+  navbar: {
+    backgroundColor: "var(--navbar-background)",
+    borderBottom: "1px solid #333",
+    color: "var(--navbar-color)",
+    height: 70,
+    position: "fixed",
+    top: 0,
+    width: "100%",
+    zIndex: 10,
+    transition: "0.2s ease-in-out",
+    "& ul": {
+      display: "flex",
+      paddingTop: 20,
+    },
+    "& a": {
+      cursor: "pointer",
+      color: "var(--navbar-color)",
+      fontSize: "1rem",
+      fontWeight: "400",
+      margin: "10px",
+      "&:hover": {
+        color: "var(--white)",
+      },
+    },
+    "&.flex": {
+      justifyContent: "space-between",
+    },
+    "&.nav_resume": {
+      color: "var(--white)",
+      fontWeight: 500,
+    },
+  },
+  container: {
+    margin: " 0 auto",
+    maxWidth: 1100,
+    padding: " 0 40px",
+  },
+  flex: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    height: "100%",
+  },
+
+  active: {
+    top: 0,
+  },
+
+  hidden: {
+    top: -70,
+    zIndex: 100,
+  },
+  mainNav: {
+    display: "block",
+  },
+  nav_resume: {
+    color: "var(--white)",
+    fontWeight: 500,
+    "&:hover": {
+      color: "var(--primary-light)",
+    },
+  },
+  menuNav: {
+    display: "block",
+    marginTop: 16,
+  },
+  navSidebar: {
+    /* background: #333; */
+    backgroundColor: "rgba(51, 51, 51, 0.95)",
+    width: "100%",
+    height: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    position: "fixed",
+    top: 0,
+    right: "-100%",
+    transition: "500ms",
+    zIndex: 10000000,
+  },
+
+  navSidebar_content: {
+    position: "relative",
+    color: "#fff",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    "& li": {
+      listStyle: "none",
+      fontSize: 35,
+      fontWeight: 500,
+      padding: "17px 0px",
+      cursor: "pointer",
+      "& a": {
+        color: "#808080",
+      },
+    },
+  },
+  navSidebar_content_close: {
+    position: "absolute",
+    top: 0,
+    right: 0,
+    marginTop: 15,
+    marginRight: 40,
+  },
+});

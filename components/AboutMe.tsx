@@ -2,8 +2,10 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Grid, Card, Typography, Button, makeStyles } from "@material-ui/core";
 import { RootState } from "../redux/reducers";
+import useTranslation from "next-translate/useTranslation";
 
 export const AboutMe: React.FC = () => {
+  const { t } = useTranslation();
   const themeData = useSelector((state: RootState) => state.theme.themeChange);
 
   const classes = useStyles();
@@ -15,12 +17,7 @@ export const AboutMe: React.FC = () => {
           <Grid className={classes.titleContainer}>
             <Typography className={classes.aboutTitle}>. about</Typography>
             <Typography className={classes.aboutDesc}>
-              Hi there! My name is Geary Audie. I worked with Front End toolsand
-              projects on a daily basis. As a visual / spatial learner, I always
-              had an eye on design and it got me into web development by playing
-              with plain HTML and CSS. What eventually would lead into a passion
-              of UI/UX design, website development, coding with front end and
-              back end tools. Some of the tools I have worked with,
+              {t("common:about.mainTxt")}
             </Typography>
             <Typography className={classes.aboutSkills}>
               - JavaScript - React JS - Node JS - HTML & CSS - Next JS - Redux -

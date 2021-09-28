@@ -11,6 +11,7 @@ import { MuiThemeProvider, createTheme } from "@material-ui/core/styles";
 import store from "../redux/store";
 
 import "../styles/globals.css";
+import { Nav } from "../components/shared/Nav";
 // import Layout from "../components/Layout";
 
 export default function MyApp(props: any) {
@@ -30,7 +31,8 @@ export default function MyApp(props: any) {
         {/* <Layout> */}
         <Provider store={store}>
           <CssBaseline />
-          <Navbar />
+          {/* <Navbar /> */}
+          <Nav />
           <Component {...pageProps} />
         </Provider>
         {/* </Layout> */}
@@ -39,8 +41,7 @@ export default function MyApp(props: any) {
   );
 }
 
-MyApp.propTypes = {
-  Component: PropTypes.elementType.isRequired,
-  pageProps: PropTypes.object.isRequired,
-};
-
+// MyApp.propTypes = {
+//   Component: PropTypes.elementType.isRequired,
+//   pageProps: PropTypes.object.isRequired,
+// };

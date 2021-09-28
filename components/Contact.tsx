@@ -1,26 +1,25 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { useRouter } from "next/router";
+import useTranslation from "next-translate/useTranslation";
+import Link from "next/link";
 import { RootState } from "../redux/reducers";
-import {
-  Grid,
-  Card,
-  Typography,
-  Button,
-  makeStyles,
-  Link,
-} from "@material-ui/core";
+import { Grid, Card, Typography, Button, makeStyles } from "@material-ui/core";
 
 export const Contact: React.FC = () => {
   const themeData = useSelector((state: RootState) => state.theme.themeChange);
   const classes = useStyles();
+  const router: any = useRouter();
+
+  const { t } = useTranslation();
 
   return (
     <Grid className={classes.root}>
       <Grid className={classes.contactContainer}>
         <Typography className={classes.contactTitle}>.get in touch</Typography>
-        <Link href="mailto:gearyaudie.ga@gmail.com">
+        <Link href={`mailto:gearyaudie.ga@gmail.com`}>
           <Button variant="outlined" className={classes.contactBtn}>
-            Click Me
+            {t("common:contact.mainBtn")}
           </Button>
         </Link>
       </Grid>
