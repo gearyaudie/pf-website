@@ -10,10 +10,8 @@ import {
   useMediaQuery,
 } from "@material-ui/core";
 import { RootState } from "../redux/reducers";
-import useTranslation from "next-translate/useTranslation";
 
 export const Work: React.FC = () => {
-  const { t } = useTranslation();
   const themeData = useSelector((state: RootState) => state.theme.themeChange);
 
   const collapseView = useMediaQuery("@media(max-width: 750px)");
@@ -46,7 +44,9 @@ export const Work: React.FC = () => {
                   </Typography>
                 )}
                 <Typography className={classes.workContentDesc}>
-                  {t("common:work.iprice")}
+                  Experience in an Agile environment. Worked with the TAM and BI
+                  team with testings, reports, and integration. Tools involved:
+                  Microsoft BI, Python.
                 </Typography>
               </Grid>
             </Paper>
@@ -72,7 +72,10 @@ export const Work: React.FC = () => {
                   </Typography>
                 )}
                 <Typography className={classes.workContentDesc}>
-                  {t("common:work.policystreet")}
+                  Worked closely with the tech team on maintanance, feature
+                  developments, and housekeeping tasks on the main website.
+                  Worked with React JS, Node JS, Next JS, Redux, TypeScript and
+                  Git.
                 </Typography>
               </Grid>
             </Paper>

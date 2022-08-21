@@ -3,13 +3,11 @@ import { useSelector } from "react-redux";
 import { RootState } from "../redux/reducers";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-import useTranslation from "next-translate/useTranslation";
 
 import classes from "../styles/Home.module.css";
 
 export const HomeContent: React.FC = () => {
   const themeData = useSelector((state: RootState) => state.theme.themeChange);
-  const { t } = useTranslation();
 
   const themeIsLight = themeData === true;
   return (
@@ -23,9 +21,12 @@ export const HomeContent: React.FC = () => {
                 : `${classes.text_main}`
             }
           >
-            {t("common:homePage.title")}
+            Hi, I'm Geary!
           </h1>
-          <p className={classes.text_secondary}>{t("common:homePage.desc")}</p>
+          <p className={classes.text_secondary}>
+            A Front End Developer, working with current technologies to create
+            good looking websites
+          </p>
           <div className={classes.icons_container}>
             <a
               className={

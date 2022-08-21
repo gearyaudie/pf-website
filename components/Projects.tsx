@@ -4,11 +4,8 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { AnyAction } from "redux";
 import Project from "./Project";
 import { Grid, Card, Typography, Button, makeStyles } from "@material-ui/core";
-import useTranslation from "next-translate/useTranslation";
 
 export const Projects: React.FC = () => {
-  const { t } = useTranslation();
-
   const classes = useStyles();
   const [expand, setExpand] = useState(false);
   const [value, setvalue] = useState("");
@@ -79,7 +76,9 @@ export const Projects: React.FC = () => {
           {expand ? <IoIosArrowUp size={50} /> : <IoIosArrowDown size={50} />}
         </Button>
       </Grid>
-      <p className="proj_desc">{t("common:projects.sideNote")}</p>
+      <p className="proj_desc">
+        All projects repository are available for view on GitHub
+      </p>
     </Grid>
   );
 };
