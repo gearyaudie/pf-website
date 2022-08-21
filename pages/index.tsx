@@ -11,6 +11,10 @@ export default function Home() {
           name="description"
           content="Geary Audie - Front End Developer - Portofolio Website"
         />
+        <meta
+          name="google-site-verification"
+          content="W0gEYFBLTP023R9FJWqC7aN8G5O6bTofhqB2mNyMPjY"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
